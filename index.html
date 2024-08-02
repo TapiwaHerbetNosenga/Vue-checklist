@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Challenge Checklist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        .count {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Overall Assessment Total: <span id="overallAssessmentTotal">0</span>/30</h2>
+        <h2>Vue Challenge Total: <span id="vueChallengeTotal">0</span>/59</h2>
+        <h2>Vue Challenge %: <span id="vueChallengePercentage">0</span>%</h2>
+        <h1>Vue Challenge Checklist</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>CATEGORY</th>
+                    <th>USER STORIES</th>
+                    <th>DIFFICULTY</th>
+                    <th>CHECK IF ACHIEVED</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody id="checklist">
+                <tr>
+                    <td>UI/UX</td>
+                    <td>As a user, I see a grid of cards</td>
+                    <td>Easy</td>
+                    <td><input type="checkbox" data-points="1"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>UI/UX</td>
+                    <td>As a user, I see an image of the product when browsing</td>
+                    <td>Easy</td>
+                    <td><input type="checkbox" data-points="1"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>UI/UX</td>
+                    <td>As a user, I see a title of product when browsing</td>
+                    <td>Easy</td>
+                    <td><input type="checkbox" data-points="1"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>UI/UX</td>
+                    <td>As a user, I see the price of product when browsing</td>
+                    <td>Easy</td>
+                    <td><input type="checkbox" data-points="1"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>UI/UX</td>
+                    <td>As a user, I see a category that the product belongs to when browsing</td>
+                    <td>Easy</td>
+                    <td><input type="checkbox" data-points="1"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>UI/UX</td>
+                    <td>As a user, I am able to navigate to a detailed view of the product (navigation only)</td>
+                    <td>Medium</td>
+                    <td><input type="checkbox" data-points="2"></td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>UI/UX</td>
+                    <td>As a user, I can see the title of the product in the detailed product page</td>
+                    <td>Easy</td>
+                    <td><input type="checkbox" data-points="1"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>UI/UX</td>
+                    <td>As a user, I can see the description of the product in the detailed product page</td>
+                    <td>Easy</td>
+                    <td><input type="checkbox" data-points="1"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>UI/UX</td>
+                    <td>As a user, I can see an image of the product in the detailed product page</td>
+                    <td>Easy</td>
+                    <td><input type="checkbox" data-points="1"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>UI/UX</td>
+                    <td>As a user, I can see the price of the product in the detailed product page</td>
+                    <td>Easy</td>
+                    <td><input type="checkbox" data-points="1"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>UI/UX</td>
+                    <td>As a user, I can see the category of the product in the detailed product page</td>
+                    <td>Easy</td>
+                    <td><input type="checkbox" data-points="1"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>UI/UX</td>
+                    <td>As a user, I can see the rating & number of reviews for the product in the detailed product page</td>
+                    <td>Easy</td>
+                    <td><input type="checkbox" data-points="1"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>UI/UX</td>
+                    <td>As a user, I am able to go back to products grid/list page from a detailed product view</td>
+                    <td>Easy</td>
+                    <td><input type="checkbox" data-points="1"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Data Fetching and State Management</td>
+                    <td>All shop data is loaded via a fetch call from the API (Note no shop data should be hardcoded in the application)</td>
+                    <td>Medium</td>
+                    <td><input type="checkbox" data-points="2"></td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Data Fetching and State Management</td>
+                    <td>When viewing a specific product, data is loaded via fetch from individual product endpoint</td>
+                    <td>Medium</td>
+                    <td><input type="checkbox" data-points="2"></td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Data Fetching and State Management</td>
+                    <td>There is a loading state while initial data is being loaded</td>
+                    <td>Easy</td>
+                    <td><input type="checkbox" data-points="1"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Data Fetching and State Management</td>
+                    <td>There is a loading state while new data is being loaded</td>
+                    <td>Easy</td>
+                    <td><input type="checkbox" data-points="1"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>User Interaction</td>
+                    <td>As a user, I am able to filter products by category (categories fetched from the API)</td>
+                    <td>Medium</td>
+                    <td><input type="checkbox" data-points="2"></td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>User Interaction</td>
+                    <td>As a user, I am able to sort products by lowest & highest price price (both required)</td>
+                    <td>Medium</td>
+                    <td><input type="checkbox" data-points="2"></td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>User Interaction</td>
+                    <td>As a user, I am able to go back to default filtering and sorting without refreshing the app (both required)</td>
+                    <td>Medium</td>
+                    <td><input type="checkbox" data-points="2"></td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>User Interaction</td>
+                    <td>As a user, I should still see my applied filters and sorting after navigating to a detailed view and returning to the home page (do not use local storage for this)</td>
+                    <td>Hard</td>
+                    <td><input type="checkbox" data-points="3"></td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>User Stories Total: <span id="userStoriesTotal">0</span>/29</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>CRITERIA</th>
+                    <th>5 EXCELLENT</th>
+                    <th>4 GOOD</th>
+                    <th>3 SATISFACTORY</th>
+                    <th>2 NEEDS IMPROVEMENT</th>
+                    <th>1 UNSATISFACTORY</th>
+                    <th>0 NO SUBMISSION</th>
+                    <th>SELECT DROP DOWN</th>
+                    <th>TOTAL</th>
+                    <th>DIFFICULTY</th>
+                </tr>
+            </thead>
+            <tbody id="overallAssessment">
+                <tr>
+                    <td>Project's appearance and layout</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                        <select data-points="5">
+                            <option value="0">No submission</option>
+                            <option value="1">1 Unsatisfactory</option>
+                            <option value="2">2 Needs Improvement</option>
+                            <option value="3">3 Satisfactory</option>
+                            <option value="4">4 Good</option>
+                            <option value="5">5 Excellent</option>
+                        </select>
+                    </td>
+                    <td>0</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>The project's navigation and user experience</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                        <select data-points="3">
+                            <option value="0">No submission</option>
+                            <option value="1">1 Unsatisfactory</option>
+                            <option value="2">2 Needs Improvement</option>
+                            <option value="3">3 Satisfactory</option>
+                            <option value="4">4 Good</option>
+                            <option value="5">5 Excellent</option>
+                        </select>
+                    </td>
+                    <td>0</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>The project's commit history (short, clear and relevant commit messages)</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                        <select data-points="2">
+                            <option value="0">No submission</option>
+                            <option value="1">1 Unsatisfactory</option>
+                            <option value="2">2 Needs Improvement</option>
+                            <option value="3">3 Satisfactory</option>
+                            <option value="4">4 Good</option>
+                            <option value="5">5 Excellent</option>
+                        </select>
+                    </td>
+                    <td>0</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Project's responsiveness and usability on different screen sizes</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                        <select data-points="5">
+                            <option value="0">No submission</option>
+                            <option value="1">1 Unsatisfactory</option>
+                            <option value="2">2 Needs Improvement</option>
+                            <option value="3">3 Satisfactory</option>
+                            <option value="4">4 Good</option>
+                            <option value="5">5 Excellent</option>
+                        </select>
+                    </td>
+                    <td>0</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>The README file must include a comprehensive introduction to the project, technologies used, setup instructions and usage examples</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                        <select data-points="3">
+                            <option value="0">No submission</option>
+                            <option value="1">1 Unsatisfactory</option>
+                            <option value="2">2 Needs Improvement</option>
+                            <option value="3">3 Satisfactory</option>
+                            <option value="4">4 Good</option>
+                            <option value="5">5 Excellent</option>
+                        </select>
+                    </td>
+                    <td>0</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>The project must load and functions without ANY bugs (Completed user stories possess no bugs whatsoever)</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                        <select data-points="5">
+                            <option value="0">No submission</option>
+                            <option value="1">1 Unsatisfactory</option>
+                            <option value="2">2 Needs Improvement</option>
+                            <option value="3">3 Satisfactory</option>
+                            <option value="4">4 Good</option>
+                            <option value="5">5 Excellent</option>
+                        </select>
+                    </td>
+                    <td>0</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>The project must have a well organized structure & clean readable code</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                        <select data-points="5">
+                            <option value="0">No submission</option>
+                            <option value="1">1 Unsatisfactory</option>
+                            <option value="2">2 Needs Improvement</option>
+                            <option value="3">3 Satisfactory</option>
+                            <option value="4">4 Good</option>
+                            <option value="5">5 Excellent</option>
+                        </select>
+                    </td>
+                    <td>0</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>The project must be well documented using JSDoc</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                        <select data-points="2">
+                            <option value="0">No submission</option>
+                            <option value="1">1 Unsatisfactory</option>
+                            <option value="2">2 Needs Improvement</option>
+                            <option value="3">3 Satisfactory</option>
+                            <option value="4">4 Good</option>
+                            <option value="5">5 Excellent</option>
+                        </select>
+                    </td>
+                    <td>0</td>
+                    <td>2</td>
+                </tr>
+            </tbody>
+        </table>
+
+     
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const checklist = document.getElementById('checklist');
+            const overallAssessment = document.getElementById('overallAssessment');
+            const userStoriesTotalElement = document.getElementById('userStoriesTotal');
+            const overallAssessmentTotalElement = document.getElementById('overallAssessmentTotal');
+            const vueChallengeTotalElement = document.getElementById('vueChallengeTotal');
+            const vueChallengePercentageElement = document.getElementById('vueChallengePercentage');
+
+            function updateTotals() {
+                let userStoriesTotal = 0;
+                let overallAssessmentTotal = 0;
+
+                checklist.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+                    if (checkbox.checked) {
+                        userStoriesTotal += parseInt(checkbox.dataset.points, 10);
+                    }
+                });
+
+                overallAssessment.querySelectorAll('select').forEach((select) => {
+                    overallAssessmentTotal += parseInt(select.value, 10);
+                });
+
+                const vueChallengeTotal = userStoriesTotal + overallAssessmentTotal;
+                const vueChallengePercentage = (vueChallengeTotal / 59) * 100;
+
+                userStoriesTotalElement.textContent = userStoriesTotal;
+                overallAssessmentTotalElement.textContent = overallAssessmentTotal;
+                vueChallengeTotalElement.textContent = vueChallengeTotal;
+                vueChallengePercentageElement.textContent = vueChallengePercentage.toFixed(2);
+            }
+
+            checklist.addEventListener('change', updateTotals);
+            overallAssessment.addEventListener('change', updateTotals);
+
+            updateTotals();
+        });
+    </script>
+</body>
+</html>
